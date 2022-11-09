@@ -4,8 +4,11 @@ import camp.nextstep.edu.missionutils.Console;
 
 public class InputDevice {
 
+    private Validator validator = new Validator();
+
     public String setMoneyToBuyLotto() {
-        String input = Console.readLine();
-        return input;
+        String money = Console.readLine();
+        validator.validateMoney(money);
+        return money;
     }
 }
